@@ -12,15 +12,6 @@ public class Image extends MediaElement implements NotPlayable {
     }
 
 
-//    public void show() {
-//        System.out.println(this.title);
-//        for (int i = 0; i < this.brightness; i++) {
-//            System.out.print(" *");
-//
-//        }
-//
-//    }
-
     @Override
     public void show() {
         System.out.println(this.title);
