@@ -9,6 +9,8 @@ public abstract class MediaElement {
     }
 
     public abstract void launch();
+
+
 }
 
 

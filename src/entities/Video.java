@@ -1,5 +1,7 @@
 package entities;
 
+import interfaces.Playable;
+
 public class Video extends MediaElement implements Playable {
     private int volume;
     private int duration;
@@ -52,5 +54,9 @@ public class Video extends MediaElement implements Playable {
     @Override
     public void launch() {
         play();
+    }
+
+    public int getDuration() {
+        return duration;
     }
 }

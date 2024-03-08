@@ -1,5 +1,7 @@
 package entities;
 
+import interfaces.Playable;
+
 public class RecordedAudio extends MediaElement implements Playable {
     private int playTime;
     private int volume;
