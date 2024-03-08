@@ -7,32 +7,37 @@ public class RecordedAudio extends MediaElement implements Playable {
 
     public RecordedAudio(String title, int playTime, int volume) {
         super(title);
-        this.playTime=playTime;
-        this.volume=volume;
+        this.playTime = playTime;
+        this.volume = volume;
     }
 
-public void volumeUp(){
-volume++;
-}
-
-public void volumeDown(){
-        volume--;
-}
 
     @Override
     public void play() {
-        for (int i = 0; i <this.playTime; i++) {
+        for (int i = 0; i < this.playTime; i++) {
+            System.out.print(this.title + " ");
             for (int j = 0; j < this.volume; j++) {
-                System.out.println("!");
+                System.out.print("!" + " ");
             }
-            System.out.println(this.title);
+
 
         }
     }
+
+    @Override
+    public void volumeUp() {
+        this.volume++;
+    }
+
+    @Override
+    public void volumeDown() {
+        this.volume--;
+    }
+
     @Override
     public void launch() {
-    play();
-        }
+        play();
+    }
 
 
 }
