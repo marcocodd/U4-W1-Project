@@ -11,15 +11,14 @@ public class Image extends MediaElement {
 
 
     public void show() {
+        System.out.println(this.title);
         for (int i = 0; i < this.brightness; i++) {
-            System.out.print(this.title + " ");
-            for (int j = 0; j < brightness; j++) {
-                System.out.print("*");
+            System.out.print(" *");
 
-            }
-            System.out.println(" ");
         }
+   
     }
+
 
     @Override
     public void launch() {

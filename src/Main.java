@@ -20,6 +20,8 @@ public class Main {
 //
 //        Image image1 = new Image("image1", 5);
 //        image1.launch();
+
+// ciclo for per 'inserire' nell' array con input i vari elementi
         Scanner input = new Scanner(System.in);
         MediaElement[] arrayMedia = new MediaElement[5];
         for (int i = 0; i < arrayMedia.length; i++) {
@@ -52,21 +54,41 @@ public class Main {
                 arrayMedia[i] = new Image(titleImage, brightnessImage);
 
             } else {
-                System.out.println("tipo inserito non valido");
+                System.out.println("tipo inserito non valido riprova");
                 i--;
             }
         }
 
-        System.out.println("inserisci quale elemento vuoi avviare da 1 a 5");
-        byte i = Byte.parseByte(input.nextLine());
-        switch (i) {
-            case 1, 2, 3, 4, 5:
-                arrayMedia[i - 1].launch();
-                break;
-            default:
-                System.out.println("Media non presente");
+// ciclo do per scelta elemento da 'lanciare' dall' array
 
+        byte i;
+
+        do {
+            System.out.println("inserisci quale elemento vuoi avviare da 1 a 5");
+            i = Byte.parseByte(input.nextLine());
+            if (i >= 1 && i <= 5) {
+                arrayMedia[i - 1].launch();
+            } else if (i == 0) {
+                System.out.println("Chiusura programma");
+
+            } else {
+                System.out.println("Numero inserito non presente");
+            }
         }
+        while (i != 0);
+
+
+// mi sono accorto dopo che così non c'è l'uscita digitanto 0 usando uno switch, letto dopo meglio la traccia :D
+
+
+//                switch (i) {
+//            case 1, 2, 3, 4, 5:
+//                arrayMedia[i - 1].launch();
+//                break;
+//            default:
+//                System.out.println("Media non presente");
+//
+//        }
         input.close();
 
 
