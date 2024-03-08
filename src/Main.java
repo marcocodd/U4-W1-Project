@@ -1,3 +1,4 @@
+import entities.Image;
 import entities.RecordedAudio;
 import entities.Video;
 
@@ -13,5 +14,8 @@ public class Main {
 
         Video video1 = new Video("Prova Video", 5, 5, 5);
         video1.launch();
+
+        Image image1 = new Image("image1", 5);
+        image1.launch();
     }
 }
