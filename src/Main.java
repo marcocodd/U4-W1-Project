@@ -21,7 +21,7 @@ public class Main {
 //        Image image1 = new Image("image1", 5);
 //        image1.launch();
 
-// ciclo for per 'inserire' nell' array con input i vari elementi
+// ciclo for per 'creazione' array con input dei vari elementi
         Scanner input = new Scanner(System.in);
         MediaElement[] arrayMedia = new MediaElement[5];
         for (int i = 0; i < arrayMedia.length; i++) {
